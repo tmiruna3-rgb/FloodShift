@@ -1,0 +1,4 @@
+mode,core_balanced_accuracy
+full,0.7387254901960785
+zero,0.3333333333333333
+true_scene_shuffled,0.2936507936507936

@@ -1,0 +1,71 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": {
+      "total": 0.5260021178656893,
+      "three_class": 0.15368549732615946,
+      "water": 0.23063692764548147,
+      "type": 0.1963716723315142,
+      "clean_anchor": 0.0036412734674752516,
+      "router": 0.524825512413766,
+      "wrong_conf": 0.014440925601850542
+    },
+    "scenario_counts": {
+      "clean": 543,
+      "optical_haze": 212,
+      "optical_missing": 198,
+      "sar_noise": 121,
+      "sar_missing": 67,
+      "combined_mild": 48,
+      "reliability_neutral": 67
+    },
+    "optimizer_steps": 157,
+    "epoch_minutes": 2.236591955025991
+  },
+  {
+    "epoch": 2,
+    "train_loss": {
+      "total": 0.35487515035613326,
+      "three_class": 0.10455338702875243,
+      "water": 0.1343066392334439,
+      "type": 0.12710880597917643,
+      "clean_anchor": 0.004789135192675148,
+      "router": 0.49227098878591685,
+      "wrong_conf": 0.008802160324435704
+    },
+    "scenario_counts": {
+      "clean": 589,
+      "optical_haze": 186,
+      "optical_missing": 194,
+      "sar_noise": 115,
+      "sar_missing": 60,
+      "combined_mild": 59,
+      "reliability_neutral": 53
+    },
+    "optimizer_steps": 314,
+    "epoch_minutes": 2.220220458507538
+  },
+  {
+    "epoch": 3,
+    "train_loss": {
+      "total": 0.3359528882369684,
+      "three_class": 0.10567670402778491,
+      "water": 0.13209128665298842,
+      "type": 0.10891213165010344,
+      "clean_anchor": 0.004918573265910078,
+      "router": 0.49477015796360696,
+      "wrong_conf": 0.00853111079016396
+    },
+    "scenario_counts": {
+      "clean": 566,
+      "optical_haze": 211,
+      "optical_missing": 168,
+      "sar_noise": 117,
+      "sar_missing": 66,
+      "combined_mild": 60,
+      "reliability_neutral": 68
+    },
+    "optimizer_steps": 471,
+    "epoch_minutes": 2.2281022747357686
+  }
+]

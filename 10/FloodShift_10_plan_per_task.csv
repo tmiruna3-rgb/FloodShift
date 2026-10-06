@@ -1,0 +1,15 @@
+task,examples,plan_accuracy
+cause_refusal,34,1.0
+extent,34,1.0
+forecast_refusal,34,1.0
+impact_refusal,34,1.0
+integrated_summary,34,1.0
+review_policy,34,1.0
+sensor_attribution,34,1.0
+spatial_geometry,34,1.0
+temporary_sensor_attribution,34,1.0
+uncertainty,34,1.0
+visual_dominance,34,0.7647058823529411
+visual_extent,34,0.7058823529411765
+visual_review,34,0.7352941176470589
+visual_uncertainty,34,0.6176470588235294

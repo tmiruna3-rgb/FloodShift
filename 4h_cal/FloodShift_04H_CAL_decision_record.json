@@ -1,0 +1,127 @@
+{
+  "experiment": "FloodShift-04H-CAL",
+  "operation": "validation-only scalar calibration of temporary-vs-permanent type logit",
+  "training_performed": false,
+  "source_04h_checkpoint": "/kaggle/input/datasets/himavarshini2108/4hptfile/FloodShift_04H_best_mIoU.pt",
+  "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+  "source_epoch": 4,
+  "source_tag": "best_mIoU",
+  "source_04e_sha256": "6ab8ad8b41aa64b4ceee403539d8554a14f61cab235a0f0841ef13f77e390822",
+  "candidate_biases": [
+    0.0,
+    -0.025,
+    -0.05,
+    -0.075,
+    -0.1,
+    -0.15
+  ],
+  "selection_rule": "among fixed candidates satisfying all scientific gates, select highest validation mIoU; numerical ties prefer smallest |bias|",
+  "reference_04h": {
+    "mIoU": 0.7932,
+    "non_flood": 0.9765,
+    "permanent": 0.8191,
+    "temporary": 0.5839
+  },
+  "reference_04g": {
+    "mIoU": 0.7953,
+    "non_flood": 0.9749,
+    "permanent": 0.8339,
+    "temporary": 0.5772
+  },
+  "gates": {
+    "mIoU": 0.79,
+    "permanent_water_IoU": 0.82,
+    "temporary_flood_IoU": 0.57
+  },
+  "single_model_preference": {
+    "min_mIoU": 0.7923,
+    "min_temporary_flood_IoU": 0.5772,
+    "min_permanent_water_IoU": 0.82
+  },
+  "candidate_results": [
+    {
+      "type_bias": 0.0,
+      "mIoU": 0.7931624660858448,
+      "non_flood_IoU": 0.9764801372393399,
+      "permanent_water_IoU": 0.8190827950675279,
+      "temporary_flood_IoU": 0.5839244659506668,
+      "gate_pass": false,
+      "single_model_preferred": false
+    },
+    {
+      "type_bias": -0.025,
+      "mIoU": 0.7936414485456457,
+      "non_flood_IoU": 0.9764846300738742,
+      "permanent_water_IoU": 0.820082021586729,
+      "temporary_flood_IoU": 0.5843576939763341,
+      "gate_pass": true,
+      "single_model_preferred": true
+    },
+    {
+      "type_bias": -0.05,
+      "mIoU": 0.7941482991449839,
+      "non_flood_IoU": 0.9764883258116636,
+      "permanent_water_IoU": 0.8211370566955493,
+      "temporary_flood_IoU": 0.5848195149277388,
+      "gate_pass": true,
+      "single_model_preferred": true
+    },
+    {
+      "type_bias": -0.075,
+      "mIoU": 0.7946184121086232,
+      "non_flood_IoU": 0.9764925390865808,
+      "permanent_water_IoU": 0.8221148373757157,
+      "temporary_flood_IoU": 0.5852478598635731,
+      "gate_pass": true,
+      "single_model_preferred": true
+    },
+    {
+      "type_bias": -0.1,
+      "mIoU": 0.7951070817809406,
+      "non_flood_IoU": 0.9764971741975079,
+      "permanent_water_IoU": 0.8231399141228091,
+      "temporary_flood_IoU": 0.585684157022505,
+      "gate_pass": true,
+      "single_model_preferred": true
+    },
+    {
+      "type_bias": -0.15,
+      "mIoU": 0.7960291342298911,
+      "non_flood_IoU": 0.976510024107163,
+      "permanent_water_IoU": 0.825057895816844,
+      "temporary_flood_IoU": 0.5865194827656661,
+      "gate_pass": true,
+      "single_model_preferred": true
+    }
+  ],
+  "selected_type_bias": -0.15,
+  "selected_metrics": {
+    "mIoU": 0.7960291342298911,
+    "macro_dice": 0.8772128803134412,
+    "confusion": [
+      [
+        13562570.0,
+        1261.0,
+        224677.0
+      ],
+      [
+        18910.0,
+        703630.0,
+        115312.0
+      ],
+      [
+        81400.0,
+        13712.0,
+        617188.0
+      ]
+    ],
+    "non_flood_IoU": 0.976510024107163,
+    "non_flood_Dice": 0.9881154278974892,
+    "permanent_water_IoU": 0.825057895816844,
+    "permanent_water_Dice": 0.9041443536754997,
+    "temporary_flood_IoU": 0.5865194827656661,
+    "temporary_flood_Dice": 0.7393788593673348
+  },
+  "decision": "04H_CAL_SINGLE_MODEL_PREFERRED",
+  "test_status": "LOCKED_NOT_EVALUATED"
+}

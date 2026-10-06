@@ -1,0 +1,353 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 1.0292503789067269,
+    "core_balanced_accuracy": 0.6575435729847494,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7647058823529411,
+        "balanced_accuracy": 0.7072440087145969
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.6176470588235294,
+        "balanced_accuracy": 0.6078431372549019
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7417582417582418
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.5
+      }
+    ]
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.1919254720211029,
+    "core_balanced_accuracy": 0.7387254901960785,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7941176470588235,
+        "balanced_accuracy": 0.7303921568627452
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7647058823529411,
+        "balanced_accuracy": 0.7470588235294118
+      },
+      {
+        "task": "review",
+        "accuracy": 0.8235294117647058,
+        "balanced_accuracy": 0.8571428571428572
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.5
+      }
+    ]
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.04862701860256493,
+    "core_balanced_accuracy": 0.6313725490196078,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6078431372549019
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.6470588235294118,
+        "balanced_accuracy": 0.6549019607843137
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7647058823529411,
+        "balanced_accuracy": 0.7362637362637363
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.7941176470588235,
+        "balanced_accuracy": 0.5583333333333333
+      }
+    ]
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.05559059858787805,
+    "core_balanced_accuracy": 0.6548669467787114,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.6691176470588235
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.6470588235294118,
+        "balanced_accuracy": 0.6406162464985994
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7417582417582418
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.9117647058823529,
+        "balanced_accuracy": 0.625
+      }
+    ]
+  },
+  {
+    "epoch": 20,
+    "train_loss": 0.006017149350373075,
+    "core_balanced_accuracy": 0.6757002801120447,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.6911764705882352
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6602240896358543
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7124542124542125
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 25,
+    "train_loss": 0.03526363801211119,
+    "core_balanced_accuracy": 0.6352941176470588,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6078431372549019
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.6176470588235294,
+        "balanced_accuracy": 0.6627450980392157
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7647058823529411,
+        "balanced_accuracy": 0.7069597069597069
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 30,
+    "train_loss": 0.010186547500779852,
+    "core_balanced_accuracy": 0.7170868347338935,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7647058823529411,
+        "balanced_accuracy": 0.7549019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6792717086834733
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 35,
+    "train_loss": 0.001483160979114473,
+    "core_balanced_accuracy": 0.6923669467787114,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.6911764705882352
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6935574229691875
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8529411764705882,
+        "balanced_accuracy": 0.48333333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 40,
+    "train_loss": 0.0006374787160893902,
+    "core_balanced_accuracy": 0.6783963585434174,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6299019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7268907563025211
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 45,
+    "train_loss": 0.00044391649425961076,
+    "core_balanced_accuracy": 0.6783963585434174,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6299019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7268907563025211
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 50,
+    "train_loss": 0.00038261848385445774,
+    "core_balanced_accuracy": 0.6783963585434174,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6299019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7268907563025211
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 55,
+    "train_loss": 0.00030812332042842174,
+    "core_balanced_accuracy": 0.6783963585434174,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6299019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7268907563025211
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  },
+  {
+    "epoch": 60,
+    "train_loss": 0.00026567098902887667,
+    "core_balanced_accuracy": 0.6783963585434174,
+    "per_task": [
+      {
+        "task": "extent",
+        "accuracy": 0.6764705882352942,
+        "balanced_accuracy": 0.6299019607843137
+      },
+      {
+        "task": "uncertainty",
+        "accuracy": 0.7352941176470589,
+        "balanced_accuracy": 0.7268907563025211
+      },
+      {
+        "task": "review",
+        "accuracy": 0.7058823529411765,
+        "balanced_accuracy": 0.6886446886446886
+      },
+      {
+        "task": "dominance",
+        "accuracy": 0.8823529411764706,
+        "balanced_accuracy": 0.6083333333333334
+      }
+    ]
+  }
+]

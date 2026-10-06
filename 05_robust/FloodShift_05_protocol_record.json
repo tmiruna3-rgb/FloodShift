@@ -1,0 +1,180 @@
+{
+  "experiment": "FloodShift-05-Robustness-Uncertainty",
+  "scientific_role": "post-segmentation robustness characterization, scalar confidence calibration, and fixed entropy-based abstention policy",
+  "network_training_performed": false,
+  "segmentation_model_changed": false,
+  "full_clean_validation_integrity": {
+    "mIoU": 0.7960326028664184,
+    "macro_dice": 0.8772154998388945,
+    "accuracy": 0.9703194412028169,
+    "confusion": [
+      [
+        13562577.0,
+        1261.0,
+        224670.0
+      ],
+      [
+        18910.0,
+        703630.0,
+        115312.0
+      ],
+      [
+        81396.0,
+        13711.0,
+        617193.0
+      ]
+    ],
+    "non_flood_IoU": 0.976510809346284,
+    "non_flood_Dice": 0.9881158299045757,
+    "permanent_water_IoU": 0.8250588632590077,
+    "permanent_water_Dice": 0.9041449345756444,
+    "temporary_flood_IoU": 0.5865281359939636,
+    "temporary_flood_Dice": 0.7393857350364635
+  },
+  "clean_robustness_half_uncalibrated": {
+    "mIoU": 0.8265124411143087,
+    "macro_dice": 0.8972684076963354,
+    "accuracy": 0.9669286546883881,
+    "confusion": [
+      [
+        6426336.0,
+        236.0,
+        135570.0
+      ],
+      [
+        13184.0,
+        567990.0,
+        55821.0
+      ],
+      [
+        45755.0,
+        2029.0,
+        390960.0
+      ]
+    ],
+    "non_flood_IoU": 0.9705871292014099,
+    "non_flood_Dice": 0.9850740571869513,
+    "permanent_water_IoU": 0.8885117166724025,
+    "permanent_water_Dice": 0.9409650031062332,
+    "temporary_flood_IoU": 0.6204384774691137,
+    "temporary_flood_Dice": 0.7657661627958221,
+    "n_valid": 7637881,
+    "nll": 0.09802478051609359,
+    "brier": 0.05000974376045874,
+    "ece_15": 0.002340094834978993,
+    "mean_confidence": 0.9666750523799821,
+    "mean_entropy": 0.09382590287231803,
+    "mean_entropy_correct": 0.08079702158460267,
+    "mean_entropy_error": 0.47475984697705875,
+    "entropy_error_auroc": 0.9386299712277286,
+    "entropy_error_auprc": 0.3435468857879123,
+    "review10_rate": 0.15938242557065238,
+    "review20_rate": 0.28968466515778396,
+    "retained10_mIoU": 0.9444955950264259,
+    "retained20_mIoU": 0.9618647140986137,
+    "retained10_accuracy": 0.995849101095438,
+    "retained20_accuracy": 0.9985969449822535
+  },
+  "clean_robustness_half_temperature_calibrated": {
+    "mIoU": 0.8265124411143087,
+    "macro_dice": 0.8972684076963354,
+    "accuracy": 0.9669286546883881,
+    "confusion": [
+      [
+        6426336.0,
+        236.0,
+        135570.0
+      ],
+      [
+        13184.0,
+        567990.0,
+        55821.0
+      ],
+      [
+        45755.0,
+        2029.0,
+        390960.0
+      ]
+    ],
+    "non_flood_IoU": 0.9705871292014099,
+    "non_flood_Dice": 0.9850740571869513,
+    "permanent_water_IoU": 0.8885117166724025,
+    "permanent_water_Dice": 0.9409650031062332,
+    "temporary_flood_IoU": 0.6204384774691137,
+    "temporary_flood_Dice": 0.7657661627958221,
+    "n_valid": 7637881,
+    "nll": 0.09798401492272979,
+    "brier": 0.050020136112905476,
+    "ece_15": 0.002112175587095098,
+    "mean_confidence": 0.9672709475748554,
+    "mean_entropy": 0.09168863118625406,
+    "mean_entropy_correct": 0.07869540589156522,
+    "mean_entropy_error": 0.47158011752919543,
+    "entropy_error_auroc": 0.9386093497845992,
+    "entropy_error_auprc": 0.3439611462456254,
+    "review10_rate": 0.15641681246408526,
+    "review20_rate": 0.2771040816163541,
+    "retained10_mIoU": 0.9437445816720276,
+    "retained20_mIoU": 0.9610201658069958,
+    "retained10_accuracy": 0.995718579063656,
+    "retained20_accuracy": 0.9984982050725243
+  },
+  "uncertainty_config": {
+    "experiment": "FloodShift-05-Robustness-Uncertainty",
+    "segmenter": "FloodShift-04H-CAL",
+    "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+    "type_bias": -0.15,
+    "temperature": 0.989592432975769,
+    "entropy_threshold_review_10": 0.1218614846467972,
+    "entropy_threshold_review_20": 0.04920305460691452,
+    "uncertainty_score": "normalized_predictive_entropy",
+    "temperature_fit_partition": "deterministic 34-scene validation calibration half",
+    "robustness_partition": "disjoint deterministic 34-scene validation robustness half",
+    "tta_modes": [
+      "identity",
+      "hflip",
+      "vflip",
+      "rot180"
+    ],
+    "ece_bins": 15,
+    "test_status": "LOCKED_NOT_EVALUATED"
+  },
+  "scenario_definitions": [
+    {
+      "name": "optical_haze_proxy",
+      "description": "7x7 low-pass optical blur; contrast attenuated to 0.60; reliability x0.25"
+    },
+    {
+      "name": "optical_missing",
+      "description": "optical standardized tensor set to 0; reliability set to 0"
+    },
+    {
+      "name": "sar_noise_0p35",
+      "description": "Gaussian standardized-domain SAR stress sigma=0.35 on nonzero SAR pixels"
+    },
+    {
+      "name": "sar_missing",
+      "description": "SAR standardized tensor set to 0"
+    },
+    {
+      "name": "combined_mild",
+      "description": "optical haze proxy + Gaussian SAR stress sigma=0.25"
+    },
+    {
+      "name": "reliability_neutral",
+      "description": "P(clear) forced to 0.5 everywhere"
+    },
+    {
+      "name": "reliability_inverted",
+      "description": "P(clear) replaced by 1-P(clear); adversarial reliability stress"
+    }
+  ],
+  "diagnostic_flags": {
+    "temperature_improved_clean_robust_half_nll": true,
+    "temperature_improved_clean_robust_half_ece": true,
+    "clean_entropy_error_auroc_ge_0p70": true,
+    "clean_review10_improves_mIoU": true,
+    "clean_review20_improves_mIoU": true
+  },
+  "test_status": "LOCKED_NOT_EVALUATED"
+}

@@ -1,0 +1,414 @@
+{
+  "experiment": "FloodShift-04H-Hierarchical-Single-Model",
+  "purpose": "single-model hierarchical water/non-water and permanent/temporary refinement derived from the 04G validation finding",
+  "base_04e": {
+    "checkpoint": "/kaggle/input/datasets/himavarshini2108/4eptfilefornow/FloodShift_FINAL_TerraMind_RIFT_best.pt",
+    "sha256": "6ab8ad8b41aa64b4ceee403539d8554a14f61cab235a0f0841ef13f77e390822",
+    "validation_4way_tta": {
+      "mIoU": 0.7790795038389211,
+      "macro_dice": 0.8639310455161135,
+      "confusion": [
+        [
+          13505124.0,
+          1828.0,
+          281556.0
+        ],
+        [
+          18963.0,
+          704640.0,
+          114249.0
+        ],
+        [
+          97153.0,
+          15041.0,
+          600106.0
+        ]
+      ],
+      "non_flood_IoU": 0.971268550663434,
+      "non_flood_Dice": 0.9854248933627555,
+      "permanent_water_IoU": 0.8244093686711804,
+      "permanent_water_Dice": 0.9037548072575882,
+      "temporary_flood_IoU": 0.5415605921821488,
+      "temporary_flood_Dice": 0.7026134359279972
+    }
+  },
+  "optional_04f_audit": {
+    "checkpoint": "/kaggle/input/datasets/himavarshini2108/4fptfilefornow/FloodShift_04F_best.pt",
+    "sha256": "75f787419da48c8ce660a0ffafe5a7835c420ec9cd8a06f1d9623e3012397aac",
+    "used_for_training": false
+  },
+  "reference_04g": {
+    "mIoU": 0.7953,
+    "non_flood": 0.9749,
+    "permanent": 0.8339,
+    "temporary": 0.5772
+  },
+  "training": {
+    "epochs": 6,
+    "head_only": true,
+    "terraMind_rift_decoder_frozen": true,
+    "train_batch_size": 2,
+    "grad_accum_steps": 4,
+    "effective_batch_size": 8,
+    "head_lr": 0.0003,
+    "weight_decay": 0.0001,
+    "nonfinite_batches": 0,
+    "train_class_counts": {
+      "non_flood": 64724902,
+      "permanent_water": 1826059,
+      "temporary_flood": 5939270
+    },
+    "water_pos_weight": 2.8870597396728064,
+    "type_temp_pos_weight": 0.30745512495643407,
+    "history": [
+      {
+        "epoch": 1,
+        "train": {
+          "total": 0.2164215873126059,
+          "three_class": 0.08671714265083384,
+          "water": 0.10644365660401334,
+          "type": 0.09312830967098255,
+          "anchor": 0.0006797616136186456
+        },
+        "validation": {
+          "mIoU": 0.7836469043219184,
+          "macro_dice": 0.8679407498259945,
+          "confusion": [
+            [
+              13518017.0,
+              811.0,
+              269680.0
+            ],
+            [
+              18458.0,
+              696613.0,
+              122781.0
+            ],
+            [
+              83133.0,
+              11904.0,
+              617263.0
+            ]
+          ],
+          "non_flood_IoU": 0.9732124299474035,
+          "non_flood_Dice": 0.9864243861197902,
+          "permanent_water_IoU": 0.8189983857826603,
+          "permanent_water_Dice": 0.9004938016261844,
+          "temporary_flood_IoU": 0.5587298972356917,
+          "temporary_flood_Dice": 0.7169040617320084
+        },
+        "compact_validation": {
+          "mIoU": 0.7836,
+          "non_flood": 0.9732,
+          "permanent": 0.819,
+          "temporary": 0.5587
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.5436871395829845,
+          "mean_abs_delta_type": 0.23648481333957
+        },
+        "lr_end": 0.0002959329638916099,
+        "epoch_minutes": 1.7024256070454915
+      },
+      {
+        "epoch": 2,
+        "train": {
+          "total": 0.19705150477220393,
+          "three_class": 0.07469447647965852,
+          "water": 0.09060350734114671,
+          "type": 0.09117710977105185,
+          "anchor": 0.0038301716873772253
+        },
+        "validation": {
+          "mIoU": 0.7870703309493559,
+          "macro_dice": 0.8706255033931068,
+          "confusion": [
+            [
+              13525390.0,
+              1266.0,
+              261852.0
+            ],
+            [
+              18310.0,
+              698200.0,
+              121342.0
+            ],
+            [
+              77219.0,
+              13097.0,
+              621984.0
+            ]
+          ],
+          "non_flood_IoU": 0.974168392089419,
+          "non_flood_Dice": 0.98691519527205,
+          "permanent_water_IoU": 0.8192768256836597,
+          "permanent_water_Dice": 0.9006620807977219,
+          "temporary_flood_IoU": 0.567765775074989,
+          "temporary_flood_Dice": 0.724299234109549
+        },
+        "compact_validation": {
+          "mIoU": 0.7871,
+          "non_flood": 0.9742,
+          "permanent": 0.8193,
+          "temporary": 0.5678
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.8022629062042517,
+          "mean_abs_delta_type": 0.4246789999306202
+        },
+        "lr_end": 0.00025287634779771155,
+        "epoch_minutes": 1.6533246954282126
+      },
+      {
+        "epoch": 3,
+        "train": {
+          "total": 0.18708703271335786,
+          "three_class": 0.07225919522754373,
+          "water": 0.08855110429343026,
+          "type": 0.08372465393244241,
+          "anchor": 0.005463019380076035
+        },
+        "validation": {
+          "mIoU": 0.7886277943426205,
+          "macro_dice": 0.8720895444288429,
+          "confusion": [
+            [
+              13544107.0,
+              1093.0,
+              243308.0
+            ],
+            [
+              18427.0,
+              693503.0,
+              125922.0
+            ],
+            [
+              76497.0,
+              12762.0,
+              623041.0
+            ]
+          ],
+          "non_flood_IoU": 0.9755589972277748,
+          "non_flood_Dice": 0.9876283103635365,
+          "permanent_water_IoU": 0.8142506754083271,
+          "permanent_water_Dice": 0.8976165051999404,
+          "temporary_flood_IoU": 0.5760737103917598,
+          "temporary_flood_Dice": 0.7310238177230517
+        },
+        "compact_validation": {
+          "mIoU": 0.7886,
+          "non_flood": 0.9756,
+          "permanent": 0.8143,
+          "temporary": 0.5761
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.804128052557216,
+          "mean_abs_delta_type": 0.5574750150827801
+        },
+        "lr_end": 0.00017598641735376428,
+        "epoch_minutes": 1.6554322083791098
+      },
+      {
+        "epoch": 4,
+        "train": {
+          "total": 0.18405966447135375,
+          "three_class": 0.07126023697260482,
+          "water": 0.08723026218046998,
+          "type": 0.08207493456255549,
+          "anchor": 0.0062127664372336805
+        },
+        "validation": {
+          "mIoU": 0.7931616549566227,
+          "macro_dice": 0.8753190578897305,
+          "confusion": [
+            [
+              13562059.0,
+              1007.0,
+              225442.0
+            ],
+            [
+              19011.0,
+              697444.0,
+              121397.0
+            ],
+            [
+              81204.0,
+              12638.0,
+              618458.0
+            ]
+          ],
+          "non_flood_IoU": 0.9764799110760579,
+          "non_flood_Dice": 0.9881000111399376,
+          "permanent_water_IoU": 0.8190798088542884,
+          "permanent_water_Dice": 0.9005430161639468,
+          "temporary_flood_IoU": 0.5839252449395216,
+          "temporary_flood_Dice": 0.737314146365307
+        },
+        "compact_validation": {
+          "mIoU": 0.7932,
+          "non_flood": 0.9765,
+          "permanent": 0.8191,
+          "temporary": 0.5839
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.9328616923269104,
+          "mean_abs_delta_type": 0.5730415314216825
+        },
+        "lr_end": 9.05502404111536e-05,
+        "epoch_minutes": 1.6558082739512126
+      },
+      {
+        "epoch": 5,
+        "train": {
+          "total": 0.18194363603018415,
+          "three_class": 0.07097719916421327,
+          "water": 0.0868660563293097,
+          "type": 0.0802922031057481,
+          "anchor": 0.006755272347322861
+        },
+        "validation": {
+          "mIoU": 0.7909465007404991,
+          "macro_dice": 0.8737663573789606,
+          "confusion": [
+            [
+              13553303.0,
+              857.0,
+              234348.0
+            ],
+            [
+              18784.0,
+              694646.0,
+              124422.0
+            ],
+            [
+              78379.0,
+              12226.0,
+              621695.0
+            ]
+          ],
+          "non_flood_IoU": 0.976063958306372,
+          "non_flood_Dice": 0.9878870106440569,
+          "permanent_water_IoU": 0.8163326223507084,
+          "permanent_water_Dice": 0.8988800975167267,
+          "temporary_flood_IoU": 0.5804429215644169,
+          "temporary_flood_Dice": 0.7345319639760983
+        },
+        "compact_validation": {
+          "mIoU": 0.7909,
+          "non_flood": 0.9761,
+          "permanent": 0.8163,
+          "temporary": 0.5804
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.9680653512477875,
+          "mean_abs_delta_type": 0.5933062068241484
+        },
+        "lr_end": 2.4665519631812892e-05,
+        "epoch_minutes": 1.6506468256314595
+      },
+      {
+        "epoch": 6,
+        "train": {
+          "total": 0.17874559161333356,
+          "three_class": 0.06996245262996074,
+          "water": 0.08537656566644218,
+          "type": 0.07871166459795616,
+          "anchor": 0.006801843018846432
+        },
+        "validation": {
+          "mIoU": 0.7914834591523426,
+          "macro_dice": 0.8741845523168433,
+          "confusion": [
+            [
+              13557999.0,
+              854.0,
+              229655.0
+            ],
+            [
+              18868.0,
+              694440.0,
+              124544.0
+            ],
+            [
+              79394.0,
+              12198.0,
+              620708.0
+            ]
+          ],
+          "non_flood_IoU": 0.9763248761231014,
+          "non_flood_Dice": 0.9880206315454869,
+          "permanent_water_IoU": 0.8161202673862151,
+          "permanent_water_Dice": 0.89875134597863,
+          "temporary_flood_IoU": 0.5820052339477112,
+          "temporary_flood_Dice": 0.735781679426413
+        },
+        "compact_validation": {
+          "mIoU": 0.7915,
+          "non_flood": 0.9763,
+          "permanent": 0.8161,
+          "temporary": 0.582
+        },
+        "delta_stats": {
+          "mean_abs_delta_water": 0.9765456989407539,
+          "mean_abs_delta_type": 0.5911502294680652
+        },
+        "lr_end": 0.0,
+        "epoch_minutes": 1.646318753560384
+      }
+    ]
+  },
+  "selection": {
+    "selected_checkpoint": "/kaggle/working/FloodShift_04H_Hierarchical_Single_Model/checkpoints/FloodShift_04H_best_mIoU.pt",
+    "selected_epoch": 4,
+    "selected_tag": "best_mIoU"
+  },
+  "validation": {
+    "04h_final": {
+      "mIoU": 0.7931616549566227,
+      "macro_dice": 0.8753190578897305,
+      "confusion": [
+        [
+          13562059.0,
+          1007.0,
+          225442.0
+        ],
+        [
+          19011.0,
+          697444.0,
+          121397.0
+        ],
+        [
+          81204.0,
+          12638.0,
+          618458.0
+        ]
+      ],
+      "non_flood_IoU": 0.9764799110760579,
+      "non_flood_Dice": 0.9881000111399376,
+      "permanent_water_IoU": 0.8190798088542884,
+      "permanent_water_Dice": 0.9005430161639468,
+      "temporary_flood_IoU": 0.5839252449395216,
+      "temporary_flood_Dice": 0.737314146365307
+    },
+    "04h_compact": {
+      "mIoU": 0.7932,
+      "non_flood": 0.9765,
+      "permanent": 0.8191,
+      "temporary": 0.5839
+    },
+    "delta_stats": {
+      "mean_abs_delta_water": 0.9328616923269104,
+      "mean_abs_delta_type": 0.5730415314216825
+    },
+    "gate": {
+      "mIoU": 0.79,
+      "temporary": 0.57,
+      "permanent": 0.82
+    },
+    "single_model_min_mIoU": 0.7923,
+    "gate_pass": false,
+    "single_model_preferred": false,
+    "decision": "04H_NOT_PROMOTED"
+  },
+  "test_status": "LOCKED_NOT_EVALUATED"
+}

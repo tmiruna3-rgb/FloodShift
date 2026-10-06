@@ -1,0 +1,24 @@
+{
+  "schema_version": "FloodShift-GeoEvidence-v1",
+  "scientific_role": "deterministic sensor/model/geospatial evidence supplied to a later grounded language model",
+  "packet_sections": [
+    "provenance",
+    "geospatial_reference",
+    "coverage",
+    "segmentation",
+    "uncertainty",
+    "sensor_quality",
+    "counterfactual_attribution",
+    "spatial_geometry",
+    "visual_evidence",
+    "grounding_policy",
+    "fact_table"
+  ],
+  "never_include": [
+    "ground truth",
+    "test-set labels",
+    "invented physical causes",
+    "LLM-generated segmentation"
+  ],
+  "counterfactual_semantics": "model dependence / sensitivity only; not physical causality"
+}

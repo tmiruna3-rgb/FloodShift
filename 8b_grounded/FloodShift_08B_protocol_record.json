@@ -1,0 +1,19 @@
+{
+  "experiment": "FloodShift-08B-Full-Grounded-Corpus",
+  "source_segmenter": "FloodShift-04H-CAL",
+  "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+  "source_uncertainty_stage": "FloodShift-05",
+  "source_attribution_stage": "FloodShift-06",
+  "validation_source_stage": "FloodShift-07",
+  "05b_status": "NOT_PROMOTED_NOT_USED",
+  "training_scenes": 314,
+  "validation_scenes": 34,
+  "training_examples": 3140,
+  "validation_examples": 340,
+  "scene_overlap": 0,
+  "grounding_verification_failures": 0,
+  "ground_truth_in_language_packets": false,
+  "external_llm_generation_used": false,
+  "test_status": "LOCKED_NOT_EVALUATED",
+  "next_stage": "Gaussian_latent_variational_multimodal_language_model"
+}

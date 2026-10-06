@@ -1,0 +1,14 @@
+system,condition,mIoU
+05 accepted,clean,0.8265
+05 accepted,optical_haze,0.5003
+05 accepted,optical_missing,0.2917
+05 accepted,sar_noise_0.35,0.8542
+05 accepted,sar_missing,0.5609
+05 accepted,combined_mild,0.4587
+05 accepted,reliability_neutral,0.8196
+05 accepted,reliability_inverted,0.797
+05B rejected,optical_haze,0.7045
+05B rejected,optical_missing,0.5395
+05B rejected,sar_missing,0.6903
+05B rejected,combined_mild,0.7318
+05B rejected,clean,0.7527

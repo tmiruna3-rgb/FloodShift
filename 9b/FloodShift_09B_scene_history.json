@@ -1,0 +1,93 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.8019450783729554,
+    "validation": {
+      "temp_fraction_MAE": 0.2419932633638382,
+      "entropy_aux_MAE": 0.1388688087463379,
+      "optical_share_MAE": 0.12520888447761536,
+      "latent_uncertainty_MAE": 0.33102336525917053,
+      "latent_entropy_correlation": 0.7645613021129541,
+      "dominance_accuracy": 0.8823529411764706,
+      "review_accuracy": 0.6176470588235294
+    }
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.1875323623418808,
+    "validation": {
+      "temp_fraction_MAE": 0.06496936082839966,
+      "entropy_aux_MAE": 0.06601809710264206,
+      "optical_share_MAE": 0.09033797681331635,
+      "latent_uncertainty_MAE": 0.026798734441399574,
+      "latent_entropy_correlation": 0.8342377605276883,
+      "dominance_accuracy": 0.8823529411764706,
+      "review_accuracy": 0.7352941176470589
+    }
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.11492467820644378,
+    "validation": {
+      "temp_fraction_MAE": 0.05129493400454521,
+      "entropy_aux_MAE": 0.035035185515880585,
+      "optical_share_MAE": 0.09179842472076416,
+      "latent_uncertainty_MAE": 0.02424781396985054,
+      "latent_entropy_correlation": 0.8439429982080595,
+      "dominance_accuracy": 0.8823529411764706,
+      "review_accuracy": 0.7647058823529411
+    }
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.08366221264004707,
+    "validation": {
+      "temp_fraction_MAE": 0.050534430891275406,
+      "entropy_aux_MAE": 0.020322086289525032,
+      "optical_share_MAE": 0.08707442879676819,
+      "latent_uncertainty_MAE": 0.02044646255671978,
+      "latent_entropy_correlation": 0.8561550514779595,
+      "dominance_accuracy": 0.7647058823529411,
+      "review_accuracy": 0.7352941176470589
+    }
+  },
+  {
+    "epoch": 20,
+    "train_loss": 0.05902325659990311,
+    "validation": {
+      "temp_fraction_MAE": 0.052643850445747375,
+      "entropy_aux_MAE": 0.020209018141031265,
+      "optical_share_MAE": 0.0873800590634346,
+      "latent_uncertainty_MAE": 0.01998475007712841,
+      "latent_entropy_correlation": 0.8467718992699178,
+      "dominance_accuracy": 0.8823529411764706,
+      "review_accuracy": 0.7647058823529411
+    }
+  },
+  {
+    "epoch": 25,
+    "train_loss": 0.04094252735376358,
+    "validation": {
+      "temp_fraction_MAE": 0.04990466684103012,
+      "entropy_aux_MAE": 0.021048542112112045,
+      "optical_share_MAE": 0.08436452597379684,
+      "latent_uncertainty_MAE": 0.020565776154398918,
+      "latent_entropy_correlation": 0.8445782218146631,
+      "dominance_accuracy": 0.8823529411764706,
+      "review_accuracy": 0.7941176470588235
+    }
+  },
+  {
+    "epoch": 30,
+    "train_loss": 0.028947266936302184,
+    "validation": {
+      "temp_fraction_MAE": 0.04811626300215721,
+      "entropy_aux_MAE": 0.018693624064326286,
+      "optical_share_MAE": 0.10007955878973007,
+      "latent_uncertainty_MAE": 0.019725775346159935,
+      "latent_entropy_correlation": 0.8414468513366232,
+      "dominance_accuracy": 0.7352941176470589,
+      "review_accuracy": 0.7352941176470589
+    }
+  }
+]

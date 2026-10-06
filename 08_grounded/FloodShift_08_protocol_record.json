@@ -1,0 +1,16 @@
+{
+  "experiment": "FloodShift-08-Grounded-Instruction-Dataset",
+  "source_07_archive_sha256": "1a8a5c35f2afedeb92aa58d7c161bca22bbaee762d6533709a515f3798a8344b",
+  "source_segmenter": "FloodShift-04H-CAL",
+  "dataset_examples": 340,
+  "train_examples": 270,
+  "validation_examples": 70,
+  "train_scenes": 27,
+  "validation_scenes": 7,
+  "scene_overlap": 0,
+  "grounding_verification_failures": 0,
+  "external_llm_generation_used": false,
+  "ground_truth_in_training_packets": false,
+  "test_status": "LOCKED_NOT_EVALUATED",
+  "next_stage": "variational_multimodal_language_model"
+}

@@ -1,0 +1,12 @@
+gate,pass
+gaussian_entropy_r_ge_0.30,True
+core_visual_balanced_accuracy_ge_0.70,True
+core_visual_full_minus_zero_ge_0.15,True
+core_visual_full_minus_shuffle_ge_0.15,True
+grounded_plan_accuracy_ge_0.95,True
+visual_plan_accuracy_ge_0.70,True
+planner_visual_full_minus_zero_ge_0.10,True
+planner_visual_full_minus_shuffle_ge_0.10,True
+refusal_recall_ge_0.95,True
+false_refusal_le_0.05,True
+renderer_fact_violations_eq_0,True

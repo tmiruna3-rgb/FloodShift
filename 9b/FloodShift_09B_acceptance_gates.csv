@@ -1,0 +1,9 @@
+gate,pass
+latent_entropy_correlation_ge_0.30,True
+visual_full_accuracy_ge_0.70,False
+visual_full_minus_zero_ge_0.15,False
+visual_full_minus_shuffle_ge_0.15,False
+numeric_recall_ge_0.85,False
+unsupported_numbers_le_0.05,False
+refusal_recall_ge_0.95,True
+false_refusal_le_0.05,False

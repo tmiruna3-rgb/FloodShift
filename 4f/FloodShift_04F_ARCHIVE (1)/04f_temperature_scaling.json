@@ -1,0 +1,6 @@
+{
+  "temperature": 1.131535291671753,
+  "calibration_split": "validation_only",
+  "n_pixels": 200000,
+  "note": "post-hoc probability calibration; not used for checkpoint selection"
+}

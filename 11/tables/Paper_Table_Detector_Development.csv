@@ -1,0 +1,6 @@
+model,mIoU,non_flood_IoU,permanent_water_IoU,temporary_flood_IoU,role
+04E TerraMind-RIFT,0.7791,0.9713,0.8244,0.5416,development baseline
+04F,0.7789,0.9765,0.7855,0.5747,permanent-water gate failed
+04G 04E+04F ensemble,0.7953,0.9749,0.8339,0.5772,two-forward validation ablation
+04H hierarchical residual,0.7932,0.9765,0.8191,0.5839,single-model predecessor
+04H-CAL FINAL,0.796029,0.97651,0.825058,0.586519,final frozen detector

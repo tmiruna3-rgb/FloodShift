@@ -1,0 +1,122 @@
+{
+  "experiment": "FloodShift-05B-Reliability-Hardening",
+  "decision": "05B_NOT_PROMOTED_FALLBACK_04H_CAL",
+  "promoted": false,
+  "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+  "delta_sha256": "dc99080485f7f0bd0a7c040d696176bf7d880fa9f33bc7865a0bd7b984a35e4f",
+  "type_bias": -0.15,
+  "warm_start_full_validation": {
+    "mIoU": 0.7960321293288942,
+    "macro_dice": 0.8772153472213818,
+    "accuracy": 0.9703196367870466,
+    "confusion": [
+      [
+        13562579.0,
+        1262.0,
+        224667.0
+      ],
+      [
+        18908.0,
+        703628.0,
+        115316.0
+      ],
+      [
+        81392.0,
+        13712.0,
+        617196.0
+      ]
+    ],
+    "non_flood_IoU": 0.9765113752022492,
+    "non_flood_Dice": 0.9881161195971628,
+    "permanent_water_IoU": 0.8250545832326875,
+    "permanent_water_Dice": 0.9041423646313993,
+    "temporary_flood_IoU": 0.5865304295517461,
+    "temporary_flood_Dice": 0.7393875574355832
+  },
+  "final_clean_full_validation": {
+    "mIoU": 0.7527280522869585,
+    "macro_dice": 0.8444333867401581,
+    "accuracy": 0.9573325831591547,
+    "confusion": [
+      [
+        13371579.0,
+        1115.0,
+        415814.0
+      ],
+      [
+        14518.0,
+        676616.0,
+        146718.0
+      ],
+      [
+        64211.0,
+        12085.0,
+        636004.0
+      ]
+    ],
+    "non_flood_IoU": 0.9642569027990219,
+    "non_flood_Dice": 0.9818032472483386,
+    "permanent_water_IoU": 0.7950348509844287,
+    "permanent_water_Dice": 0.885815504415881,
+    "temporary_flood_IoU": 0.4988924030774251,
+    "temporary_flood_Dice": 0.6656814085562549
+  },
+  "baseline_05": {
+    "clean": {
+      "mIoU": 0.8265,
+      "permanent_water_IoU": 0.8885,
+      "temporary_flood_IoU": 0.6204
+    },
+    "optical_haze_proxy": {
+      "mIoU": 0.5003,
+      "permanent_water_IoU": 0.3847,
+      "temporary_flood_IoU": 0.2099
+    },
+    "optical_missing": {
+      "mIoU": 0.2917,
+      "permanent_water_IoU": 0.0148,
+      "temporary_flood_IoU": 0.0
+    },
+    "sar_noise_0p35": {
+      "mIoU": 0.8542,
+      "permanent_water_IoU": 0.9289,
+      "temporary_flood_IoU": 0.6609
+    },
+    "sar_missing": {
+      "mIoU": 0.5609,
+      "permanent_water_IoU": 0.3026,
+      "temporary_flood_IoU": 0.4288
+    },
+    "combined_mild": {
+      "mIoU": 0.4587,
+      "permanent_water_IoU": 0.2972,
+      "temporary_flood_IoU": 0.1856
+    },
+    "reliability_neutral": {
+      "mIoU": 0.8196,
+      "permanent_water_IoU": 0.8922,
+      "temporary_flood_IoU": 0.5991
+    },
+    "reliability_inverted": {
+      "mIoU": 0.797,
+      "permanent_water_IoU": 0.8577,
+      "temporary_flood_IoU": 0.5683
+    }
+  },
+  "core_robustness_baseline_average": 0.45289999999999997,
+  "core_robustness_05b_average": 0.6664954873893308,
+  "core_robustness_gain": 0.21359548738933087,
+  "promotion_criteria": {
+    "clean_full_mIoU": false,
+    "clean_full_permanent": false,
+    "clean_full_temporary": false,
+    "core_robustness_gain": true,
+    "optical_missing_mIoU": true,
+    "optical_missing_temporary": true,
+    "sar_missing_preserved": true
+  },
+  "temperature": 0.9491788744926453,
+  "risk_threshold_review_10": 0.42124081850051887,
+  "risk_threshold_review_20": 0.33421332836151124,
+  "test_status": "LOCKED_NOT_EVALUATED"
+}

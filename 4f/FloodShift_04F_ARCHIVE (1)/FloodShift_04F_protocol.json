@@ -1,0 +1,125 @@
+{
+  "model": "FloodShift-04F-HierarchicalRefiner",
+  "warmstart": "FloodShift-FINAL-TerraMind-RIFT",
+  "warmstart_sha256": "6ab8ad8b41aa64b4ceee403539d8554a14f61cab235a0f0841ef13f77e390822",
+  "data": {
+    "dataset": "Sen1Floods11 v1.1 HandLabeled",
+    "train": 314,
+    "validation": 68,
+    "test": 58,
+    "target": "0 background, 1 permanent water, 2 temporary flood, 255 ignore",
+    "train_sampling": "fixed class-aware stochastic crops + scene oversampling",
+    "test_used_for_training_or_validation": false
+  },
+  "refiner": "zero-init hierarchical residual: water-vs-background + temp-vs-permanent",
+  "loss": {
+    "CE": 0.28,
+    "Lovasz": 0.2,
+    "conditional_water_type_CE": 0.18,
+    "temp_focal_tversky": 0.1,
+    "perm_focal_tversky": 0.08,
+    "water_union_dice": 0.07,
+    "boundary_CE": 0.06,
+    "aux_CE": 0.03
+  },
+  "training": {
+    "max_epochs": 22,
+    "stage_A": "refiner only",
+    "stage_B": "refiner + task tail; TerraMind frozen",
+    "stage_C": "final TerraMind block only + task tail",
+    "full_backbone_unfreeze": false,
+    "skipped_nonfinite_batches": 0,
+    "minutes": 40.52089279492696
+  },
+  "selection": {
+    "best_epoch": 2,
+    "best_stage": "A",
+    "best_no_tta": {
+      "mIoU": 0.7750074703768699,
+      "macro_dice": 0.862886689301091,
+      "accuracy": 0.9668501681372428,
+      "confusion": [
+        [
+          13532520.0,
+          552.0,
+          255436.0
+        ],
+        [
+          20183.0,
+          668221.0,
+          149448.0
+        ],
+        [
+          71832.0,
+          11023.0,
+          629445.0
+        ]
+      ],
+      "non_flood_IoU": 0.974928682442297,
+      "non_flood_Dice": 0.9873052035850234,
+      "non_flood_Precision": 0.9932463750138996,
+      "non_flood_Recall": 0.9814346845938662,
+      "permanent_water_IoU": 0.786672662865673,
+      "permanent_water_Dice": 0.8806007717204516,
+      "permanent_water_Precision": 0.9829728330263785,
+      "permanent_water_Recall": 0.7975406157650754,
+      "temporary_flood_IoU": 0.5634210658226397,
+      "temporary_flood_Dice": 0.7207540925977984,
+      "temporary_flood_Precision": 0.6085539514023101,
+      "temporary_flood_Recall": 0.8836796293696476,
+      "loss": 0.32097903962301855
+    },
+    "inference_mode": "4way_tta",
+    "final_validation": {
+      "mIoU": 0.7788828791779312,
+      "macro_dice": 0.8659530720607925,
+      "accuracy": 0.9681746645404488,
+      "confusion": [
+        [
+          13552801.0,
+          456.0,
+          235251.0
+        ],
+        [
+          19917.0,
+          665683.0,
+          152252.0
+        ],
+        [
+          71156.0,
+          9126.0,
+          632018.0
+        ]
+      ],
+      "non_flood_IoU": 0.9764560616058943,
+      "non_flood_Dice": 0.9880878007604298,
+      "non_flood_Precision": 0.9933249896620271,
+      "non_flood_Recall": 0.982905547141141,
+      "permanent_water_IoU": 0.7855278405161936,
+      "permanent_water_Dice": 0.879883049361021,
+      "permanent_water_Precision": 0.9858100153273159,
+      "permanent_water_Recall": 0.7945114411614461,
+      "temporary_flood_IoU": 0.5746647354117056,
+      "temporary_flood_Dice": 0.7298883660609267,
+      "temporary_flood_Precision": 0.619916607897238,
+      "temporary_flood_Recall": 0.887291871402499
+    },
+    "promotion_pass": false,
+    "gate": {
+      "mIoU": 0.79,
+      "temporary": 0.57,
+      "permanent": 0.82
+    }
+  },
+  "test_metrics": null,
+  "temperature_scaling": {
+    "temperature": 1.131535291671753,
+    "calibration_split": "validation_only",
+    "n_pixels": 200000,
+    "note": "post-hoc probability calibration; not used for checkpoint selection"
+  },
+  "checkpoint_integrity": {
+    "sha256": "75f787419da48c8ce660a0ffafe5a7835c420ec9cd8a06f1d9623e3012397aac",
+    "all_finite": true
+  }
+}

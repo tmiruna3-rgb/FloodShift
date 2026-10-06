@@ -1,0 +1,162 @@
+{
+  "model": "FloodShift-FINAL-TerraMind-RIFT",
+  "backbone": "terramind_v1_base",
+  "backbone_pretrained": true,
+  "backbone_modalities": [
+    "S2L1C",
+    "S1GRD"
+  ],
+  "optical_bands": [
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12"
+  ],
+  "sar_channels": [
+    "VV",
+    "VH"
+  ],
+  "terramind_layers": [
+    2,
+    5,
+    8,
+    11
+  ],
+  "fusion": "deep zero-init reliability-conditioned cross-attention + 4 spatial P(clear) routers",
+  "decoder": "multiscale routed U-Net / ConvNeXt refine",
+  "loss": {
+    "weighted_ce": 0.45,
+    "lovasz_softmax": 0.35,
+    "temporary_focal_tversky": 0.2,
+    "auxiliary_ce": 0.08
+  },
+  "training": {
+    "batch_size": 2,
+    "grad_accum_steps": 4,
+    "effective_batch": 8,
+    "max_epochs": 30,
+    "frozen_backbone_epochs": 5,
+    "partial_unfreeze": "last 2 TerraMind encoder blocks only",
+    "full_unfreeze": false,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "lr_backbone_top": 2e-06,
+    "lr_fusion_stage_b": 8e-05,
+    "lr_decoder_stage_b": 0.00015,
+    "lr_head_stage_b": 0.0002,
+    "scheduler": "CosineAnnealingLR per stage",
+    "augmentation": "aligned D4 only"
+  },
+  "data": {
+    "dataset": "Sen1Floods11 v1.1 HandLabeled",
+    "retained_scenes": 440,
+    "train_scenes": 314,
+    "validation_scenes": 68,
+    "test_scenes": 58,
+    "tile_size": 256,
+    "tiles_per_scene": 4,
+    "target_semantics": "valid JRC==1 -> class1 permanent_water; valid flood==1 & JRC!=1 -> class2 temporary_flood; flood==-1 -> ignore",
+    "test_used_for_selection": false
+  },
+  "selection": {
+    "best_epoch": 17,
+    "chosen_model_kind": "best_single",
+    "inference_mode": "4way_tta",
+    "validation": {
+      "mIoU": 0.7790795038389211,
+      "macro_dice": 0.8639310455161135,
+      "accuracy": 0.9655256717340367,
+      "confusion": [
+        [
+          13505124.0,
+          1828.0,
+          281556.0
+        ],
+        [
+          18963.0,
+          704640.0,
+          114249.0
+        ],
+        [
+          97153.0,
+          15041.0,
+          600106.0
+        ]
+      ],
+      "non_flood_IoU": 0.971268550663434,
+      "non_flood_Dice": 0.9854248933627555,
+      "non_flood_Precision": 0.9914753722862236,
+      "non_flood_Recall": 0.9794478126277332,
+      "permanent_water_IoU": 0.8244093686711804,
+      "permanent_water_Dice": 0.9037548072575882,
+      "permanent_water_Precision": 0.9766198342640217,
+      "permanent_water_Recall": 0.8410077197404793,
+      "temporary_flood_IoU": 0.5415605921821488,
+      "temporary_flood_Dice": 0.7026134359279972,
+      "temporary_flood_Precision": 0.6025699083552647,
+      "temporary_flood_Recall": 0.842490523655763
+    },
+    "promotion_pass": true,
+    "promotion_thresholds": {
+      "mIoU": 0.56,
+      "temporary_flood_IoU": 0.35,
+      "permanent_water_IoU": 0.3
+    }
+  },
+  "test_metrics": {
+    "mIoU": 0.716203297773896,
+    "macro_dice": 0.8230943281982906,
+    "accuracy": 0.9518043447554283,
+    "confusion": [
+      [
+        11324721.0,
+        2923.0,
+        323354.0
+      ],
+      [
+        15186.0,
+        343000.0,
+        153432.0
+      ],
+      [
+        96470.0,
+        40210.0,
+        805101.0
+      ]
+    ],
+    "non_flood_IoU": 0.962769201576447,
+    "non_flood_Dice": 0.9810314944856225,
+    "non_flood_Precision": 0.9902367681653027,
+    "non_flood_Recall": 0.9719957895452389,
+    "permanent_water_IoU": 0.6182954154206122,
+    "permanent_water_Dice": 0.764131702443105,
+    "permanent_water_Precision": 0.8882949657242453,
+    "permanent_water_Recall": 0.6704220727183172,
+    "temporary_flood_IoU": 0.567545276324629,
+    "temporary_flood_Dice": 0.7241197876661444,
+    "temporary_flood_Precision": 0.628059259513514,
+    "temporary_flood_Recall": 0.8548707183517187
+  },
+  "temperature_scaling": {
+    "temperature": 0.9162433743476868,
+    "calibration_split": "validation_only",
+    "n_pixels": 200000,
+    "note": "post-hoc probability calibration; not used for checkpoint selection"
+  },
+  "training_minutes": 40.38006326754888,
+  "total_parameters": 106678998,
+  "history_rows": 25,
+  "checkpoint_integrity": {
+    "final_checkpoint": "/kaggle/working/FloodShift_FINAL_TerraMind_RIFT/checkpoints/FloodShift_FINAL_TerraMind_RIFT_best.pt",
+    "sha256": "6ab8ad8b41aa64b4ceee403539d8554a14f61cab235a0f0841ef13f77e390822",
+    "all_floating_tensors_finite": true,
+    "sanitized_parameter": "backbone.missing_mod_token",
+    "sanitation_behavioral_effect": "none; full validation logits identical before/after"
+  }
+}

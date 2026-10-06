@@ -1,0 +1,55 @@
+{
+  "experiment": "FloodShift-10-Final-Reliable-Grounded-Variational-VLP",
+  "source_08b_sha256": "421bb74db41f90012b7e5d0f1b342ecfc467b657b12177806973f3bf2e13da20",
+  "source_09b_sha256": "30c1de0205f76eb5e41223550e8c093525eaaca024794f8b6a3f30aeee6267ce",
+  "architecture": {
+    "high_resolution_visual_encoder": "openai/clip-vit-large-patch14-336",
+    "high_resolution_visual_encoder_trainable": false,
+    "gaussian_uncertainty_encoder": "Frozen successful FloodShift-09B GaussianSceneEncoder",
+    "gaussian_trainable": false,
+    "instruction_aware_visual_resampler": true,
+    "query_tokens": 8,
+    "text_encoder": "google/flan-t5-base",
+    "text_adaptation": "LoRA q/v",
+    "output": "finite response plan + deterministic fact renderer"
+  },
+  "train_only_bins": {
+    "extent_tertiles": [
+      0.008143621010519039,
+      0.04433379074221727
+    ],
+    "uncertainty_tertiles": [
+      0.04018604134519895,
+      0.08872490127881368
+    ]
+  },
+  "metrics": {
+    "gaussian_entropy_correlation": 0.8414468577487988,
+    "gaussian_entropy_mae": 0.0197257731548127,
+    "visual_core_balanced_accuracy": 0.7387254901960785,
+    "visual_full_minus_zero": 0.40539215686274516,
+    "visual_full_minus_shuffle": 0.44507469654528486,
+    "grounded_plan_accuracy": 1.0,
+    "visual_plan_accuracy": 0.7058823529411765,
+    "planner_visual_full_minus_zero": 0.19852941176470595,
+    "planner_visual_full_minus_shuffle": 0.23529411764705888,
+    "refusal_recall": 1.0,
+    "false_refusal_rate": 0.0,
+    "renderer_fact_violations": 0
+  },
+  "acceptance_gates": {
+    "gaussian_entropy_r_ge_0.30": true,
+    "core_visual_balanced_accuracy_ge_0.70": true,
+    "core_visual_full_minus_zero_ge_0.15": true,
+    "core_visual_full_minus_shuffle_ge_0.15": true,
+    "grounded_plan_accuracy_ge_0.95": true,
+    "visual_plan_accuracy_ge_0.70": true,
+    "planner_visual_full_minus_zero_ge_0.10": true,
+    "planner_visual_full_minus_shuffle_ge_0.10": true,
+    "refusal_recall_ge_0.95": true,
+    "false_refusal_le_0.05": true,
+    "renderer_fact_violations_eq_0": true
+  },
+  "status": "ACCEPTED",
+  "frozen_geographic_test": "LOCKED_NOT_EVALUATED"
+}

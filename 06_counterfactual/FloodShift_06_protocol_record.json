@@ -1,0 +1,123 @@
+{
+  "experiment": "FloodShift-06-Counterfactual-Sensor-Attribution",
+  "model": "accepted 04H-CAL",
+  "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+  "source_04e_sha256": "6ab8ad8b41aa64b4ceee403539d8554a14f61cab235a0f0841ef13f77e390822",
+  "type_bias": -0.15,
+  "temperature": 0.989592432975769,
+  "counterfactuals": {
+    "full": "SAR + optical + P(clear)",
+    "no_sar": "SAR zeroed; optical + P(clear) retained",
+    "no_optical": "optical zeroed; P(clear)=0; SAR retained"
+  },
+  "attribution_metric": "normalized Jensen-Shannon divergence / ln(2)",
+  "interpretation": "model dependence / counterfactual sensitivity, not physical causality",
+  "calibration_scenes": 34,
+  "attribution_scenes": 34,
+  "high_fragility_threshold": 0.20378518104553223,
+  "dominance_share_threshold": 0.65,
+  "counterfactual_integrity": {
+    "full": {
+      "mIoU": 0.8264983597497428,
+      "accuracy": 0.9669247268974209,
+      "confusion": [
+        [
+          6426306.0,
+          236.0,
+          135600.0
+        ],
+        [
+          13183.0,
+          567981.0,
+          55831.0
+        ],
+        [
+          45746.0,
+          2029.0,
+          390969.0
+        ]
+      ],
+      "non_flood_IoU": 0.9705840641189318,
+      "permanent_water_IoU": 0.8884976378938148,
+      "temporary_flood_IoU": 0.6204133772364819
+    },
+    "no_sar": {
+      "mIoU": 0.5608738048643044,
+      "accuracy": 0.9204522825113405,
+      "confusion": [
+        [
+          6511651.0,
+          403.0,
+          50088.0
+        ],
+        [
+          176918.0,
+          195699.0,
+          264378.0
+        ],
+        [
+          106529.0,
+          9260.0,
+          322955.0
+        ]
+      ],
+      "non_flood_IoU": 0.9512185145792422,
+      "permanent_water_IoU": 0.3026313754720424,
+      "temporary_flood_IoU": 0.4287715245416285
+    },
+    "no_optical": {
+      "mIoU": 0.29168075300590646,
+      "accuracy": 0.8603748866995964,
+      "confusion": [
+        [
+          6562006.0,
+          136.0,
+          0.0
+        ],
+        [
+          627430.0,
+          9435.0,
+          130.0
+        ],
+        [
+          438556.0,
+          188.0,
+          0.0
+        ]
+      ],
+      "non_flood_IoU": 0.8602380557851153,
+      "permanent_water_IoU": 0.01480420323260408,
+      "temporary_flood_IoU": 0.0
+    }
+  },
+  "attribution_summary": {
+    "mean_js_sar": 0.04289841483544225,
+    "mean_js_optical": 0.1332432571420121,
+    "mean_fragility": 0.13353228478711054,
+    "sar_share": 0.21256827726241828,
+    "optical_share": 0.7874317227375817,
+    "flip_rate_no_sar": 0.07215587667784,
+    "flip_rate_no_optical": 0.14990244102120626,
+    "support_sar": 0.05048176486506112,
+    "support_optical": 0.12001120099682729,
+    "water_js_sar": 0.15519937493330874,
+    "water_js_optical": 0.6637752841952745,
+    "temporary_js_sar": 0.1294647061259925,
+    "temporary_js_optical": 0.6608757313362342,
+    "permanent_js_sar": 0.24042818351014675,
+    "permanent_js_optical": 0.7467439192995415,
+    "spearman_pclear_vs_optical_share": 0.3649302507072481,
+    "spearman_pclear_vs_optical_share_p": 1.3507110599959082e-05,
+    "spearman_pclear_vs_sar_share": -0.3649302507072481,
+    "spearman_pclear_vs_sar_share_p": 1.3507110599959082e-05
+  },
+  "error_detection": {
+    "entropy_AUROC": 0.9411233353400508,
+    "entropy_AUPRC": 0.3450585718389083,
+    "fragility_AUROC": 0.8843598726446611,
+    "fragility_AUPRC": 0.11547293638340658,
+    "combined_AUROC": 0.9229391125814965,
+    "combined_AUPRC": 0.21048162880825422
+  },
+  "test_status": "LOCKED_NOT_EVALUATED"
+}

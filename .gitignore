@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large ML files
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.onnx
+
+# Dataset folders
+data/
+dataset/
+datasets/
+
+# Logs / cache
+logs/
+cache/
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==============================
+# FloodShift - large artifacts
+# ==============================
+
+# PyTorch / model files
+*.pt
+*.pth
+*.ckpt
+*.pt.*
+*.pth.*
+*.ckpt.*
+
+# Split checkpoint parts
+*.part001
+*.part002
+*.part003
+*.part004
+*.part005
+*.part006
+*.part007
+*.part008
+*.part009
+*.part*
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Other model exports
+*.onnx
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

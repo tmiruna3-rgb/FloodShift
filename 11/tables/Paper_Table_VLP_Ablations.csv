@@ -1,0 +1,4 @@
+experiment,gaussian_entropy_r,free_text_numeric_recall,grounded_plan_accuracy,renderer_fact_violations,visual_full_accuracy,visual_zero_accuracy,visual_shuffle_accuracy,status
+09A,0.0381,0.6813,,,,,,NOT_ACCEPTED
+09B,0.8414,0.8439,,,0.5882,0.5074,0.5221,NOT_ACCEPTED_OVERALL
+10 FINAL VLP,0.8414,,1.0,0.0,0.7059,0.5074,0.4706,ACCEPTED

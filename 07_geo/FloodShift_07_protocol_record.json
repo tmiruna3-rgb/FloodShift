@@ -1,0 +1,20 @@
+{
+  "experiment": "FloodShift-07-Deterministic-GeoEngine",
+  "source_segmenter": "FloodShift-04H-CAL",
+  "source_04h_sha256": "ef3341a7579f1316c80290dcd2a8f972c0adbf7e03e7a8c6bc239f30c4b47e53",
+  "type_bias": -0.15,
+  "temperature": 0.989592432975769,
+  "entropy_threshold_review_10": 0.1218614846467972,
+  "entropy_threshold_review_20": 0.04920305460691452,
+  "counterfactual_high_fragility_tile_threshold": 0.20378518104553223,
+  "counterfactual_dominance_share_threshold": 0.65,
+  "source_uncertainty_stage": "FloodShift-05",
+  "source_attribution_stage": "FloodShift-06",
+  "05b_status": "NOT_PROMOTED_NOT_USED",
+  "packet_count": 34,
+  "packet_schema_version": "FloodShift-GeoEvidence-v1",
+  "packet_verifier_failures": 0,
+  "ground_truth_in_packet": false,
+  "test_status": "LOCKED_NOT_EVALUATED",
+  "next_stage": "grounded_instruction_dataset"
+}
